@@ -1,1 +1,1 @@
-web: npm deploy:reactjs
+web: node server/bin/www.js
