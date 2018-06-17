@@ -3,14 +3,11 @@
 ### Prerequired
 NodeJS; MongoDB; NPM
 
-### Build projects
-npm install
+### Build projects for Heroku
+npm run build:heroku
 
-### Local development
-npm run dev:mongo-w-3.6
-
-npm run dev:deploy
+Then upload server/ and ui/ files on Git branch heroku for auto-deploiement
 
 ## Goals
 
-Deployable project that download, build and deploy front-end + back-end projects
+Deployable project for Heroku that download, build and deploy front-end + back-end projects

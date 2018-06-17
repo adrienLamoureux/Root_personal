@@ -10,10 +10,7 @@
     "build:server": "npm run build:nodejs",
     "build:ui": "npm run build:reactjs",
     "build:heroku": "npm run build:reset && npm install && npm run build:ui && npm run build:server",
-    "preinstall": "npm prune",
-    "dev:start": "nodemon server/bin/www.js",
-    "dev:deploy": "npm install && npm run dev:start",
-    "dev:mongo-w-3.6": "cd && \"C:/Program Files/MongoDB/Server/3.6/bin/mongod.exe\""
+    "preinstall": "npm prune"
   },
   "repository": {
     "type": "git",
