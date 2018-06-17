@@ -3,16 +3,14 @@
 ### Prerequired
 NodeJS; MongoDB; NPM
 
-### Start MongoDB
-npm run mongo-w-3.6
+### Build projects
+npm install
 
-### Deploy server and front-end
-npm run deploy:reactjs
+### Local development
+npm run dev:mongo-w-3.6
 
-OR
-
-npm run deploy:angular
+npm run dev:deploy
 
 ## Goals
 
-Deployable project on Heroku that download, build and deploy front-end + back-end projects
+Deployable project that download, build and deploy front-end + back-end projects
