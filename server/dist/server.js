@@ -27,6 +27,8 @@ class Server {
     config() {
         const MONGODB_CONNECTION = 'mongodb://' + config.mongoUrl + ':' + config.mongoPort + '/' + config.mongoDB;
         this.app.use(express.static(path.join(__dirname, '..', '..', 'dist')));
+        this.app.use(express.static(path.join(__dirname, '..', '..', 'ui')));
+        this.app.use(express.static(path.join(__dirname, '..', '..', 'ui/dist')));
         this.app.use(logger("dev"));
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({
