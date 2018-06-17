@@ -3,14 +3,14 @@
   "version": "0.0.0",
   "license": "None",
   "scripts": {
-    "build:reset": "npm prune && rimraf server && rimraf ui && mkdirp server && mkdirp ui",
+    "build:reset": "rimraf server && rimraf ui && mkdirp server && mkdirp ui",
     "build:angular": "cd node_modules/angular_personal && npm install && npm run build && cpy --parents dist/**/* ../../ui",
     "build:reactjs": "cd node_modules/reactjs_personal && npm install && npm run build && cpy --parents dist/**/* ../../ui && cpy --parents node_modules/react/umd/react.development.js ../../ui && cpy --parents node_modules/react-dom/umd/react-dom.development.js ../../ui && cpy index.html ../../ui",
     "build:nodejs": "cd node_modules/nodemongo_personal && npm install && npm run grunt && cpy --parents dist/**/* ../../server && cpy --parents bin/**/* ../../server",
     "build:server": "npm run build:nodejs",
     "build:ui": "npm run build:reactjs",
-    "preinstall": "npm run build:reset",
-    "postinstall": "npm run build:ui && npm run build:server",
+    "build:heroku": "npm run build:reset && npm install && npm run build:ui && npm run build:server",
+    "preinstall": "npm prune",
     "dev:start": "nodemon server/bin/www.js",
     "dev:deploy": "npm install && npm run dev:start",
     "dev:mongo-w-3.6": "cd && \"C:/Program Files/MongoDB/Server/3.6/bin/mongod.exe\""
