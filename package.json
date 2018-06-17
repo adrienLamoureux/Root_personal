@@ -13,7 +13,13 @@
     "build:ui": "npm run build:angularnative:web",
     "build:heroku": "npm run build:reset && npm install && npm run build:ui && npm run build:server",
     "preinstall": "npm prune",
+<<<<<<< HEAD
     "start": "node server/bin/www.js"
+=======
+    "dev:start": "nodemon server/bin/www.js",
+    "dev:deploy": "npm install && npm run dev:start",
+    "dev:mongo-w-3.6": "cd && \"C:/Program Files/MongoDB/Server/3.6/bin/mongod.exe\""
+>>>>>>> Update config for heroku build and deploy
   },
   "repository": {
     "type": "git",
