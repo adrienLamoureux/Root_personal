@@ -21,6 +21,7 @@
   },
   "private": true,
   "dependencies": {
+    "angular_personal": "git+https://github.com/adrienLamoureux/Angular_personal.git",
     "assert": "^1.4.1",
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
