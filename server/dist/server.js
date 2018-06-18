@@ -36,7 +36,7 @@ class Server {
         }));
         this.app.disable('etag');
         this.app.use(methodOverride());
-        Server.dbConnection = mongoose.createConnection(MONGODB_CONNECTION);
+        Server.dbConnection = mongoose.createConnection(MONGODB_CONNECTION, { db: config.mongoDB, user: config.mongoUser, pass: config.mongoPwd });
         this.app.use(function (err, req, res, next) {
             err.status = 404;
             next(err);
