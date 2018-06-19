@@ -9,7 +9,7 @@
     "build:reactjs": "cd node_modules/reactjs_personal && npm install && npm run build && cpy --parents dist/**/* ../../ui && cpy --parents node_modules/react/umd/react.development.js ../../ui && cpy --parents node_modules/react-dom/umd/react-dom.development.js ../../ui && cpy index.html ../../ui",
     "build:nodejs": "cd node_modules/nodemongo_personal && npm install && npm run grunt && cpy --parents dist/**/* ../../server && cpy --parents bin/**/* ../../server",
     "build:server": "npm run build:nodejs",
-    "build:ui": "npm run build:reactjs",
+    "build:ui": "npm run build:angular",
     "build:heroku": "npm run build:reset && npm install && npm run build:ui && npm run build:server",
     "preinstall": "npm prune",
     "start": "node server/bin/www.js"
