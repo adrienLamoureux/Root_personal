@@ -5,10 +5,11 @@
   "scripts": {
     "build:reset": "npm prune && rimraf server && rimraf ui && mkdirp server && mkdirp ui",
     "build:angular": "cd node_modules/angular_personal && npm install && npm run build && cpy --parents dist/**/* ../../ui",
+    "build:angularnative:web": "cd node_modules/angularnative_personal && npm install && npm run build && cpy --parents dist/**/* ../../ui",
     "build:reactjs": "cd node_modules/reactjs_personal && npm install && npm run build && cpy --parents dist/**/* ../../ui && cpy --parents node_modules/react/umd/react.development.js ../../ui && cpy --parents node_modules/react-dom/umd/react-dom.development.js ../../ui && cpy index.html ../../ui",
     "build:nodejs": "cd node_modules/nodemongo_personal && npm install && npm run grunt && cpy --parents dist/**/* ../../server && cpy --parents bin/**/* ../../server",
     "build:server": "npm run build:nodejs",
-    "build:ui": "npm run build:reactjs",
+    "build:ui": "npm run build:angularnative:web",
     "preinstall": "npm run build:reset",
     "postinstall": "npm run build:ui && npm run build:server",
     "dev:start": "nodemon server/bin/www.js",
@@ -22,6 +23,7 @@
   "private": true,
   "dependencies": {
     "angular_personal": "git+https://github.com/adrienLamoureux/Angular_personal.git",
+    "angularnative_personal": "git+https://github.com/adrienLamoureux/AngularNative_personal.git",
     "assert": "^1.4.1",
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
